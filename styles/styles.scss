@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap");
+
+$primaryFont: "Public Sans";
+
+$primaryDarkBlue: hsl(233, 26%, 24%);
+$primaryLimeGreen: hsl(136, 65%, 51%);
+$primaryBrightCyan: hsl(192, 70%, 51%);
+
+$neutralGrayishBlue: hsl(233, 8%, 62%);
+$neutralLightGrayishBlue: hsl(220, 16%, 96%);
+$neutralVeryLightGray: hsl(0, 0%, 98%);
+$neutralWhite: hsl(0, 0%, 100%);
+
+@mixin flex($di, $jc) {
+  display: flex;
+  flex-direction: $di;
+  justify-content: $jc;
+}
+
+@mixin border($px, $col) {
+  border: $px solid $col;
+}
+
+* {
+  box-sizing: border-box;
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Public Sans";
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: auto 170px;
+}
+
+header {
+  nav {
+    @include flex(row, space-between);
+    align-items: center;
+    height: 80px;
+
+    a {
+      text-decoration: none;
+      color: $neutralGrayishBlue;
+      margin-right: 10px;
+      font-size: 15px;
+      &:hover {
+        border-bottom: 3px solid $primaryLimeGreen;
+      }
+    }
+
+    button {
+      background-image: linear-gradient(
+        to right,
+        $primaryLimeGreen,
+        $primaryBrightCyan
+      );
+      padding: 15px 35px;
+      border: none;
+      border-radius: 50px;
+      color: white;
+      font-family: $primaryFont;
+      font-weight: 400;
+      font-size: 15px;
+      &:hover {
+        background-image: linear-gradient(
+          to right,
+          hsl(136, 71%, 84%),
+          hsl(192, 80%, 62%)
+        );
+      }
+    }
+  }
+
+  .hero {
+    // @include border(3px, blue);
+    @include flex(row, space-between);
+    align-items: center;
+    position: relative;
+    height: 80vh;
+    background-color: #fafafa;
+    background-image: url(../images/bg-intro-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 600px -500px;
+    overflow: hidden;
+
+    .hero-info {
+      // @include border(3px, purple);
+      h1 {
+        font-weight: 300;
+        width: 500px;
+        color: $primaryDarkBlue;
+        font-size: 60px;
+      }
+
+      p {
+        color: $neutralGrayishBlue;
+        width: 450px;
+        line-height: 30px;
+      }
+
+      button {
+        background-image: linear-gradient(
+          to right,
+          $primaryLimeGreen,
+          $primaryBrightCyan
+        );
+        padding: 15px 35px;
+        border: none;
+        border-radius: 50px;
+        color: white;
+        font-family: $primaryFont;
+        font-weight: 400;
+        font-size: 15px;
+        &:hover {
+          background-image: linear-gradient(
+            to right,
+            hsl(136, 71%, 84%),
+            hsl(192, 80%, 62%)
+          );
+        }
+      }
+    }
+    .hero-image {
+      // @include border(3px, cyan);
+      position: absolute;
+      right: -120px;
+      top: -180px;
+      width: 50%;
+      img {
+        // @include border(3px, red);
+        // position: absolute;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.content {
+  // @include border(3px, magenta);
+  padding: 140px 0;
+  background-color: #f4f5f7;
+
+  h1 {
+    font-weight: 300;
+    color: $primaryDarkBlue;
+  }
+
+  p {
+    color: $neutralGrayishBlue;
+    width: 690px;
+    line-height: 30px;
+  }
+
+  .content-cards {
+    @include flex(row, space-evenly);
+    // flex-wrap: wrap;
+
+    .content-card {
+      margin: 40px 0px;
+
+      h2 {
+        font-weight: 300;
+        color: $primaryDarkBlue;
+      }
+
+      p {
+        // @include border(3px, blue);
+        font-size: 16px;
+        width: 80%;
+      }
+    }
+  }
+}
+
+.articles {
+  // @include border(3px, blue);
+  background-color: #fafafa;
+  padding: 80px 0;
+
+  h1 {
+    font-weight: 300;
+    color: $primaryDarkBlue;
+  }
+
+  .articles-cards {
+    // @include border(3px, violet);
+    @include flex(row, space-evenly);
+
+    .article-card {
+      margin-right: 25px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+      small {
+        font-weight: 300;
+        color: $neutralGrayishBlue;
+        font-size: 12px;
+      }
+
+      h3 {
+        font-weight: 300;
+        font-size: 16px;
+        width: 200px;
+        color: $primaryDarkBlue;
+        &:hover {
+          cursor: pointer;
+          color: $primaryLimeGreen;
+        }
+      }
+
+      p {
+        color: $neutralGrayishBlue;
+        font-size: 14px;
+        width: 200px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $primaryDarkBlue;
+  color: white;
+  padding: 50px 0;
+  @include flex(row, space-evenly);
+
+  .socials {
+    img[alt="logo"] {
+      margin-bottom: 40px;
+    }
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  .support {
+    td {
+      padding-right: 50px;
+      padding-bottom: 10px;
+      font-size: 15px;
+      &:hover {
+        cursor: pointer;
+        color: $primaryLimeGreen;
+      }
+    }
+
+    p {
+      text-align: center;
+      margin: 10px auto;
+      position: absolute;
+      a {
+        font-weight: 400;
+        text-decoration: none;
+        color: $primaryLimeGreen;
+      }
+    }
+  }
+
+  .misc {
+    button {
+      background-image: linear-gradient(
+        to right,
+        $primaryLimeGreen,
+        $primaryBrightCyan
+      );
+      padding: 15px 35px;
+      border: none;
+      border-radius: 50px;
+      color: white;
+      font-family: $primaryFont;
+      font-weight: 400;
+      font-size: 15px;
+      &:hover {
+        background-image: linear-gradient(
+          to right,
+          hsl(136, 71%, 84%),
+          hsl(192, 80%, 62%)
+        );
+      }
+    }
+
+    p {
+      color: $neutralGrayishBlue;
+      font-size: 15px;
+    }
+  }
+}

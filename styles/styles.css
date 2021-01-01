@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* button:hover {
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Public Sans";
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: auto 170px;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #9698a6;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+header nav a:hover {
+  border-bottom: 3px solid #31d35c;
+}
+
+header nav button {
+  background-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background-image: linear-gradient(to right, #31d35c, #2bb7da);
+  padding: 15px 35px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-family: "Public Sans";
+  font-weight: 400;
+  font-size: 15px;
+}
+
+header nav button:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#b9f3c9), to(#51cdec));
+  background-image: linear-gradient(to right, #b9f3c9, #51cdec);
+}
+
+header .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 80vh;
+  background-color: #fafafa;
+  background-image: url(../images/bg-intro-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 600px -500px;
+  overflow: hidden;
+}
+
+header .hero .hero-info h1 {
+  font-weight: 300;
+  width: 500px;
+  color: #2d314d;
+  font-size: 60px;
+}
+
+header .hero .hero-info p {
+  color: #9698a6;
+  width: 450px;
+  line-height: 30px;
+}
+
+header .hero .hero-info button {
+  background-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background-image: linear-gradient(to right, #31d35c, #2bb7da);
+  padding: 15px 35px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-family: "Public Sans";
+  font-weight: 400;
+  font-size: 15px;
+}
+
+header .hero .hero-info button:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#b9f3c9), to(#51cdec));
+  background-image: linear-gradient(to right, #b9f3c9, #51cdec);
+}
+
+header .hero .hero-image {
+  position: absolute;
+  right: -120px;
+  top: -180px;
+  width: 50%;
+}
+
+header .hero .hero-image img {
+  width: 100%;
+}
+
+.content {
+  padding: 140px 0;
+  background-color: #f4f5f7;
+}
+
+.content h1 {
+  font-weight: 300;
+  color: #2d314d;
+}
+
+.content p {
+  color: #9698a6;
+  width: 690px;
+  line-height: 30px;
+}
+
+.content .content-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.content .content-cards .content-card {
+  margin: 40px 0px;
+}
+
+.content .content-cards .content-card h2 {
+  font-weight: 300;
+  color: #2d314d;
+}
+
+.content .content-cards .content-card p {
+  font-size: 16px;
+  width: 80%;
+}
+
+.articles {
+  background-color: #fafafa;
+  padding: 80px 0;
+}
+
+.articles h1 {
+  font-weight: 300;
+  color: #2d314d;
+}
+
+.articles .articles-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.articles .articles-cards .article-card {
+  margin-right: 25px;
+}
+
+.articles .articles-cards .article-card:last-of-type {
+  margin-right: 0;
+}
+
+.articles .articles-cards .article-card small {
+  font-weight: 300;
+  color: #9698a6;
+  font-size: 12px;
+}
+
+.articles .articles-cards .article-card h3 {
+  font-weight: 300;
+  font-size: 16px;
+  width: 200px;
+  color: #2d314d;
+}
+
+.articles .articles-cards .article-card h3:hover {
+  cursor: pointer;
+  color: #31d35c;
+}
+
+.articles .articles-cards .article-card p {
+  color: #9698a6;
+  font-size: 14px;
+  width: 200px;
+}
+
+.articles .articles-cards .article-card img {
+  width: 100%;
+}
+
+footer {
+  background-color: #2d314d;
+  color: white;
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer .socials img[alt="logo"] {
+  margin-bottom: 40px;
+}
+
+footer .socials img {
+  margin-right: 10px;
+}
+
+footer .support td {
+  padding-right: 50px;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+footer .support td:hover {
+  cursor: pointer;
+  color: #31d35c;
+}
+
+footer .support p {
+  text-align: center;
+  margin: 10px auto;
+  position: absolute;
+}
+
+footer .support p a {
+  font-weight: 400;
+  text-decoration: none;
+  color: #31d35c;
+}
+
+footer .misc button {
+  background-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background-image: linear-gradient(to right, #31d35c, #2bb7da);
+  padding: 15px 35px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-family: "Public Sans";
+  font-weight: 400;
+  font-size: 15px;
+}
+
+footer .misc button:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#b9f3c9), to(#51cdec));
+  background-image: linear-gradient(to right, #b9f3c9, #51cdec);
+}
+
+footer .misc p {
+  color: #9698a6;
+  font-size: 15px;
+}
+/*# sourceMappingURL=styles.css.map */
